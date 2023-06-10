@@ -1,0 +1,41 @@
+/* CSS for Header, Footer, and Navigation */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #000000;
+    font-family: 'Montserrat';
+}
+
+nav {
+    margin: 0;
+    position: relative;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    font-size: 40px;
+    margin: 0 250px 0 100px;
+}
+
+.nav-item {
+    font-size: 32px;
+    color: #D9D9D9;
+    padding: 0 25px 0 25px;
+}
+
+.nav-item .active {
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    border-bottom: 1.5px solid #D6FD51;
+}
+
+.right-buttons {
+    margin: 0 100px 0 100px;
+}
+
+.right-buttons > img {
+    padding: 15px;
+}
+
