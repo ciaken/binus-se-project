@@ -6,36 +6,50 @@ body {
     font-family: 'Montserrat';
 }
 
-nav {
-    margin: 0;
-    position: relative;
-}
-
 .navbar-brand {
     font-weight: 900;
     font-size: 40px;
-    margin: 0 250px 0 100px;
 }
 
-.nav-item {
+.nav-link {
     font-size: 32px;
     color: #D9D9D9;
-    padding: 0 25px 0 25px;
 }
 
-.nav-item .active {
-    font-weight: 500;
+.button {
+    display: none;
 }
 
-.nav-item:hover {
-    border-bottom: 1.5px solid #D6FD51;
+
+
+/* Desktop CSS */
+@media (min-width: 992px) {
+    .nav-link {
+        margin-right: 30px;
+    }
+
+    .button {
+        display: block;
+        margin-right: 2px;
+    }
+
+    .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid #D6FD51;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 3px;
+        margin-bottom: -6px;
+    }
+
+    .navbar {
+        margin: 35px 0 35px 0;
+    }
 }
 
-.right-buttons {
-    margin: 0 100px 0 100px;
-}
 
-.right-buttons > a {
-    padding: 15px;
-}
+
+
+
 
