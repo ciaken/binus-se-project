@@ -9,6 +9,14 @@ body {
 .navbar-brand {
     font-weight: 900;
     font-size: 40px;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.navbar-brand:hover {
+    color: #D6FD51;
 }
 
 .nav-link {

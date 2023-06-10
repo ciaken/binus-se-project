@@ -14,8 +14,181 @@
 .para1 {
     margin-top: 15px;
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 100;
+}
+
+.para1 > span {
+    color: #D6FD51;
+}
+
+.para2 {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-style: italic;
+}
+
+.tombol {
+    border-radius: 25px;
+    background-color: #D6FD51;
+    color: black;
+    font-weight: 650;
+    font-size: 24px;
+}
+
+.tombol:hover {
+    background-color: #D6FD51;
+    color: black;
+}
+
+.tombol.active.focus, .tombol.active:focus,
+.tombol.focus, .tombol:active.focus, 
+.tombol:active:focus, .tombol:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #D6FD51;
+}
+
+.help-title {
+    color: #FFFFFF;
+    font-size: 64px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.learn-more > a{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.cards {
+    width: 360px;
+    height: 360px;
+    background-color: #313131;
+    position: relative;
+    border-radius: 15px;
+}
+
+.cards h3 {
+    color: #D9D9D9;
+}
+
+.cards:hover {
+    background-color: #D6FD51;
+}
+
+.cards:hover h3 {
+    color: black;
+    font-weight: 600;
+}
+
+.cards:hover a {
+    color: black;
+    font-weight: 600;
+}
+
+.cards:hover .arrow {
+    filter: invert(0%) sepia(92%) saturate(12%) hue-rotate(54deg) brightness(103%) contrast(100%);
+}
+
+
+.card-image1 {
+    width: 191px;
+    height: 218px;
+    right: 0;
+    bottom: 0;
+}
+
+.card-image2 {
+    width: 111px;
+    height: 218px;
+    bottom: 0;
+    right: 0;
+}
+
+.card-image3 {
+    width: 234px;
+    height: 218px;
+    bottom: 0;
+    right: 0;
+}
+
+.arrow { filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(135deg) brightness(106%) contrast(103%); }
+
+hr {
+    color: white;
+}
+
+.blockquote > p {
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.blockquote-footer > cite {
+    color: #D6FD51;
+    font-size: 24px;
+}
+
+.carousel-item img {
+    opacity: .6;
+}
+
+.container-fluid h1 {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 80px 0 80px 0 !important;
+    padding: 0 !important;
+}
+
+.testi {
+    background-color: #313131;
+    height: 600px;
+    position: relative;
+
+}
+
+.testi-1 {
+    height: 600px;
+    background: url('./assets/image\ 3.png') no-repeat 50% 50% / cover;
+}
+
+.testi-1 h4 {
+    color: #FFFFFF;
+    font-size: 48px;
+    text-align: end;
+    
+}
+
+.testi-2 {
+    height: 600px;
+    background: url('./assets/image\ 4.png') no-repeat 50% 50% / cover;
+}
+
+.testi-2 h4 {
+    color: #FFFFFF;
+    font-size: 48px;
+} 
+
+.testi-desc {
+    background-color: #313131;
+    padding: 100px !important;
+}
+
+.testi-desc p {
+    color: #D6FD51;
+    font-size: 29px;
+}
+
+.testi-desc h5 {
+    color: #D9D9D9;
+    font-size: 26px;
 }
 
 @media (min-width: 992px) {
@@ -26,6 +199,9 @@
     .display-3 {
         padding-top: 300px;
         font-size: 96px;
+    }
+    .container-fluid h1 {
+        font-size: 72px;
     }
 }
 
