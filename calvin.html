@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Fitchat</title>
+  <style>
+   body {
+      background-image: url("assets/back.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .bgoverlay {
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .chat-bubble-left {
+      align-self: flex-start;
+    }
+
+    .chat-bubble-right {
+      align-self: flex-end;
+    }
+    .borderProfileList {
+      border-left: 1px solid #D6FD51;
+      border-right: 1px solid #D6FD51;
+    }
+
+    .line {
+      z-index: -1;
+      width: 500%;
+      transform: translate(-600px, 10px);
+    }
+
+    .borderSingle {
+      padding-top: 18px;
+    }
+
+    .borderSingle1 {
+      padding-top: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 15%;
+    }
+
+
+    .fs-5 {
+      font-weight: 600px;
+      font-size: 20px;
+    }
+
+    .fs-6 {
+      font-weight: 100;
+      font-size: 20px;
+      color: #D9D9D9;
+      opacity: 0.7;
+    }
+
+    .profileOther {
+      margin-top: 40px;
+    }
+
+    .fitchat {
+      font-size: 40px;
+      font-weight: 900;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 15px;
+
+    }
+
+    .memberContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 0;
+      width: 67.5%;
+    }
+
+   
+
+    .inputUser {
+      display: flex;
+      padding: 0 18px;
+    }
+
+    .member {
+      border-bottom: 1px solid #D6FD51;
+      padding-left: 14px;
+      padding-top: 14px;
+      padding-bottom: 8px;
+    }
+
+    .actionContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .homeIcon {
+      transform: translateY(-40px);
+    }
+
+    .allContainer {
+      display: flex;
+      width: 100%;
+    }
+
+    .chatContainer {
+      display: flex;
+      width: 85%;
+    }
+
+    .tittle {
+      width: 100%;
+      padding: 0;
+      border-bottom: 1px solid #D6FD51;
+    }
+
+    .firstLeft {
+      border-bottom: 1px solid #D6FD51;
+      padding: 13px 0 13px;
+    }
+
+    .d-flex {
+      padding-left: 20px;
+    }
+
+    #input {
+      background-color: #D9D9D9;
+      font-weight: 100;
+      font-size: 20px;
+      border-radius: 20px;
+    }
+
+    @media only screen and (max-width: 870px) {
+      .allContainer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .bgoverlay {
+        overflow-y: scroll;
+      }
+
+      .borderSingle1 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        border-bottom: 1px solid #D6FD51;
+      }
+
+      .tittle {
+        border: none;
+      }
+
+      .d-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+      }
+
+      .homeIcon {
+        transform: translateY(-10px);
+      }
+
+      .memberContainer {
+        width: 84%;
+      }
+    }
+
+    @media only screen and (max-width: 657px) {
+      .member {
+        padding-bottom: 38px;
+      }
+    }
+
+  </style>
+</head>
+
+<body class="bgoverlay">
+
+  <div class="allContainer">
+    <div class="borderSingle1">
+      <div class="tittle">
+        <p class="fitchat text-light">FitChat</p>
+      </div>
+      <div class="homeIcon">
+        <img src="assets/homeicon.png" alt="Home Icon">
+      </div>
+    </div>
+    <div class="chatContainer">
+      <div class="col-4 position-relative borderProfileList">
+        
+
+        <div class="row">
+          <div class="borderSingle">
+            <div class="d-flex align-items-center firstLeft">
+              <img src="assets/calvinpic.png" alt="Profile Image" style="max-width: 75px; margin-right: 6px">
+              <div>
+                <p class="fs-5 text-light mb-0">Calvin Tjoaquinn</p>
+                <p class="fs-6">My Account</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row profileOther" style="min-height: 16vh;">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <img src="assets/frengkypic.png" alt="Profile Image" class="mr-1"
+                style="max-width: 75px; margin-right: 6px">
+              <div>
+                <p class="fs-5 text-light mb-0">Frengky Situmorang</p>
+                <p class="fs-6">Personal Trainer (Gym)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="min-height: 16vh;">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <img src="assets/gutapic.png" alt="Profile Image" class="mr-1" style="max-width: 75px; margin-right: 6px">
+              <div>
+                <p class="fs-5 text-light mb-0">Guta Gutawa</p>
+                <p class="fs-6">Personal Trainer (Badmin)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="min-height: 16vh;">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <img src="assets/brodypic.png" alt="Profile Image" class="mr-1"
+                style="max-width: 75px; margin-right: 6px">
+              <div>
+                <p class="fs-5 text-light mb-0">Brody Sibrodai</p>
+                <p class="fs-6">Personal Trainer (Yoga)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="min-height: 16vh;">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <img src="assets/aghakpic.png" alt="Profile Image" class="mr-1"
+                style="max-width: 75px; margin-right: 6px">
+              <div>
+                <p class="fs-5 text-light mb-0">Aghak Laen</p>
+                <p class="fs-6">Personal Trainer (Swim)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="min-height: 16vh;">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <img src="assets/laepic.png" alt="Profile Image" class="mr-1" style="max-width: 75px; margin-right: 6px">
+              <div>
+                <p class="fs-5 text-light mb-0">Lae lombardi</p>
+                <p class="fs-6">Personal Trainer (Gym)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-6 memberContainer">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center member">
+              <img src="assets/frengkypic.png" alt="Profile Image" style="max-width: 75px; margin-right: 6px" >
+              <div>
+                <p class="fs-5 text-light mb-0">Frengky Situmorang</p>
+                <p class="fs-6">Personal Trainer (Gym)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="min-height: 70vh; max-height: 70vh; height: 70vh; overflow: hidden;">
+          <div class="col-12" style="height: 100%; overflow-y: scroll; flex-direction: column-reverse;">
+            <div class="row" id="msgData" style="transform: translateZ(0);">
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="inputUser">
+          <div class="col-9">
+            <input type="text" id="messageBox" placeholder="Message to calvin" class="form-control"
+              style="align-self: flex-end;" />
+          </div>
+          <div class="actionContainer">
+            <div>
+              <img src="assets/icon/mdi_file-outline.png" alt="file icon" class="img-fluid" style="width: 25px;">
+            </div>
+            <div>
+              <img src="assets/icon/Vector.png" alt="file icon" class="img-fluid" style="width: 25px;">
+            </div>
+            <div>
+              <img src="assets/icon/mdi_emoji-outline.png" alt="file icon" class="img-fluid" style="width: 25px;">
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script>
+    if ("WebSocket" in window) {
+
+const messageBox = document.querySelector('#messageBox');
+
+// Add an event listener to the input element for "Enter" key press
+messageBox.addEventListener("keyup", function (event) {
+  // Check if the key pressed is "Enter" (key code 13)
+  if (event.keyCode === 13) {
+    // Trigger the click event on the send button
+    if (ws) {
+      if (messageBox.value !== "") {
+        ws.send(messageBox.value);
+        showMyMessage(`Calvin Tjoaquinn: ${messageBox.value}`);
+      }
+    } else {
+      alert("ERROR: Not connected... refresh to try again!");
+    }
+  }
+});
+
+const msgData = document.querySelector('#msgData');
+
+function showMessage(message) {
+  msgData.innerHTML += `
+  <div class="col-12">
+    <pre class="text-light align-self-end">${message}</pre>
+  </div>
+  `
+
+  msgData.scrollIntoView(false);
+}
+
+function showMyMessage(message) {
+  msgData.innerHTML += `
+              <div class="col-12 d-flex justify-content-end">
+                  <pre class="text-light align-self-end">${message}</pre>
+              </div>
+              `
+
+  msgData.scrollIntoView(false);
+  messageBox.value = '';
+}
+
+let ws = new WebSocket("ws://localhost:8082");
+
+ws.onopen = function () {
+  console.log("Connected to Server");
+};
+
+ws.onmessage = function ({ data }) {
+  showMessage(`Frengky Situmorang: ${data}`);
+};
+
+ws.onclose = function () {
+  ws = null;
+  alert("Connection closed... refresh to try again!");
+};
+
+} else {
+alert("WebSocket NOT supported by your Browser!");
+}
+  </script>
+</body>
+
+</html>
